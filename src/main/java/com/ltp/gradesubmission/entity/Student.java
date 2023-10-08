@@ -22,6 +22,16 @@ public class Student {
     @Column(name = "birth_date", nullable = false)
     private LocalDate birthDate;
 
+    public Student(Long id, String name, LocalDate birthDate) {
+        this.id = id;
+        this.name = name;
+        this.birthDate = birthDate;
+    }
+
+    public Student() {
+        
+    }
+
     public Long getId() {
         return this.id;
     }
