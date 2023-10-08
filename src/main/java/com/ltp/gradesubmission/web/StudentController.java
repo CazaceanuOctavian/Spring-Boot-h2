@@ -1,5 +1,7 @@
 package com.ltp.gradesubmission.web;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +27,11 @@ public class StudentController {
     @GetMapping("/{id}")
     public ResponseEntity<Student> getStudent (@PathVariable Long id) {
         return new ResponseEntity<>(studentService.getStudent(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<Student>> getStudentList () {
+        return new ResponseEntity<>(studentService.getStudents(), HttpStatus.OK);
     }
  
     @PostMapping
