@@ -3,6 +3,7 @@ com/ltp/gradesubmission/service/CourseServiceImpl.class
 com/ltp/gradesubmission/entity/Grade.class
 com/ltp/gradesubmission/web/CourseController.class
 com/ltp/gradesubmission/entity/Student.class
+com/ltp/gradesubmission/repository/StudentRepository.class
 com/ltp/gradesubmission/service/GradeService.class
 com/ltp/gradesubmission/web/StudentController.class
 com/ltp/gradesubmission/service/StudentServiceImpl.class
