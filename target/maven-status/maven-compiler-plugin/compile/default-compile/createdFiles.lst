@@ -1,4 +1,5 @@
 com\ltp\gradesubmission\entity\Grade.class
+com\ltp\gradesubmission\repository\CourseRepository.class
 com\ltp\gradesubmission\service\GradeService.class
 com\ltp\gradesubmission\repository\StudentRepository.class
 com\ltp\gradesubmission\service\CourseServiceImpl.class

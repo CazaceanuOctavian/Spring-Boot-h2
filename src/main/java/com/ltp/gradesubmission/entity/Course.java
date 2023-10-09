@@ -7,16 +7,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "course")
 @Getter
 @Setter
-@AllArgsConstructor
+@RequiredArgsConstructor
 @NoArgsConstructor
 public class Course {
 
@@ -24,11 +25,17 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    @Column(name = "subject")
+
+    @NonNull
+    @Column(name = "subject", nullable = false)
     private String subject;
-    @Column(name = "code")
+
+    @NonNull
+    @Column(name = "code", nullable = false)
     private String code;
-    @Column(name = "description")
+
+    @NonNull
+    @Column(name = "description", nullable = false)
     private String description;
 
 }
