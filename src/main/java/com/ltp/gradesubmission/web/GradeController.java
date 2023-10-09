@@ -1,6 +1,5 @@
 package com.ltp.gradesubmission.web;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,12 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ltp.gradesubmission.entity.Grade;
 import com.ltp.gradesubmission.service.GradeService;
 
+import lombok.AllArgsConstructor;
+
 
 @RestController
 @RequestMapping("/grade")
+@AllArgsConstructor
 public class GradeController {
 
-    @Autowired
     GradeService gradeService;
 
     @PostMapping("/student/{studentId}/course/{courseId}")
