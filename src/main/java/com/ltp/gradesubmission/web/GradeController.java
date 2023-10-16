@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,5 +32,10 @@ public class GradeController {
     public ResponseEntity<Grade> getGrade(@PathVariable Long studentId, @PathVariable Long courseId) {
         return new ResponseEntity<>(gradeService.getGrade(studentId, courseId), HttpStatus.OK);
     }   
+
+    @PutMapping("/student/{studentId}/course/{courseId}")
+    public ResponseEntity<Grade> updateGrade(@PathVariable Long courseId, @PathVariable Long studentId, @RequestBody Grade grade) {
+        return new ResponseEntity<Grade>(gradeService.updateGrade(grade.getScore(), studentId, courseId), HttpStatus.OK);
+    }
 
 }
